@@ -1,0 +1,9 @@
+.idea/
+
+node_modules
+
+build/assets/
+build/design/
+build/templates/
+
+draft/components/**/*.css

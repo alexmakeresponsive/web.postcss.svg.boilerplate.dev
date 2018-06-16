@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "React_Starter_kit_with_Livereload_through_Webpack",
+  "version": "1.0.0",
+  "description": "React: Starter kit with Livereload through Webpack",
+  "scripts": {
+    "prod": "NODE_ENV=production  webpack",
+    "devl": "NODE_ENV=development webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
