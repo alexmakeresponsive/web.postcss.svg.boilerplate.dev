@@ -1,26 +1,58 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-import Header from '../../parts/Header/index.jsx';
-import Footer from '../../parts/Footer/index.jsx';
-
+import Icon from '../../parts/Icon/index.jsx';
 import './index.styl';
-import '../../../vendor/materialize1/Carousel/index.css';
+
+import '../../../vendor/lostgrid/GridResponsive/index.styl';
 
 
+const renderCols = function () {
+    let svgClasses = ['business-compass','business-connection','business-email','business-group','business-handshake','business-invoice','business-like','business-placeholder','business-printer','business-smartphone','construction-drill-tip','construction-home','construction-meter','construction-window','custom-basket','custom-button-home','custom-logo-1','custom-logo-2','custom-section-delimeter','simple-arrow-right','simple-calendar','simple-cart','simple-checkmark','simple-chevron-left','simple-close','simple-edit','simple-file','simple-info','simple-location','simple-lock','simple-mail','simple-menu','simple-message','simple-plus','simple-reply','simple-search','simple-star','simple-user','social-instagram-mh','social-telegram-mh','social-twitter-mh','social-vk-mh','social-youtube-mh','tools-air-compressor','tools-clamp','tools-hammer-tool','tools-hard-hat','tools-jigsaw','tools-screws','unique-quote'];
+
+    let cols = svgClasses.map(function(svgClass, index) {
+
+        return (
+            <div key={index} className="col">
+                <Icon name={svgClass} iconGroup={svgClass.slice( 0, svgClass.indexOf('-'))} />
+            </div>
+        );
+    });
+
+    return cols;
+};
 
 const  Index = () => (
-    <div className="pageIndex  sf-wr-page">
-        <Header />
-            <div>
-                <div className="grid">
-                    <div className="col">col1</div>
-                    <div className="col">col1</div>
-                    <div className="col">col1</div>
+    <div className="pageIndex">
+        <main className="mainIndex">
+            <div className="grid">
+                {renderCols()}
+                <div className="col">
+                    <Icon name="custom-basket" iconGroup="custom" iconStyles="color-1" />
                 </div>
-                <div className="test"></div>
+                <div className="col">
+                    <Icon name="custom-logo-1" iconGroup="custom" iconStyles="gradient-1" />
+                </div>
+                <div className="col">
+                    <Icon name="custom-logo-2" iconGroup="custom" />
+                </div>
+                <div className="col">
+                    <Icon name="custom-button-home" iconGroup="custom" />
+                </div>
+                <div className="col">
+                    <Icon name="custom-basket" iconGroup="custom" />
+                </div>
+                <div className="col">
+                    <Icon name="custom-logo-1" iconGroup="custom" />
+                </div>
+                <div className="col">
+                    <Icon name="custom-logo-2" iconGroup="custom" />
+                </div>
+                <div className="col">
+                    <Icon name="custom-button-home" iconGroup="custom" iconStyles="gradient-2"/>
+                </div>
             </div>
-        <Footer />
+        </main>
     </div>
 );
 

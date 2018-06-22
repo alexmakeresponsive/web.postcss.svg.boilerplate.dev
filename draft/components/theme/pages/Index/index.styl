@@ -1,23 +1,58 @@
-//@lost flexbox no-flex;
+@require '../../../vendor/lostgrid/GridResponsive/index.styl'
+
 @lost flexbox flex;
 @lost gutter 30px;
 
 
+.grid12, .grid, .gridLost
+  //margin-bottom: 30px
+//
+//.grid12
+//  lost-utility: edit
+//  container()
+//
+//  .col
+//    col-xs(1)
+//    col-sm(1)
+//    col-md(1)
+//    col-lg(1)
+//    col-xl(1)
+
+
 .grid
-  //lost-utility: clearfix
-  lost-center: 980px
+  lost-utility: edit
+  container()
+  //container-column('md')
+  //container-row('lg')
+  //container-column('xl')
+
+  .col
+    col-xs(12)
+    col-sm(12)
+    col-md(6)
+    col-lg(2)
+    col-xl(2)
+    col-xl-offset(0)
+
+    margin-bottom: 30px
 
 
-.col
-  color: #373737
-  lost-column: 1/3
-  background-color: #dcff9b
+//
+//.gridLost
+//  lost-utility: edit
+//  container()
+//
+//  .col
+//    @media (min-width gridBreakpoints['xs'])
+//      lost-column 12/12
+//    @media (min-width gridBreakpoints['sm'])
+//      lost-column 12/12
+//    @media (min-width gridBreakpoints['md'])
+//      lost-column 1/2
+//    @media (min-width gridBreakpoints['lg'])
+//      lost-column 1/3
+//    @media (min-width gridBreakpoints['xl'])
+//      lost-column 1/4
+//
+//
 
-
-
-.test
-  display block
-  width 980px
-  height 40px
-  background-color #767676
-  margin auto
